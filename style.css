@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main container */
+.main-container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Navigation bar */
+.nav-bar {
+    background-color: #333;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    transition: height 0.3s ease; /* Transition for height */
+    /*height: 60px;  Default height when closed */
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav-title {
+    color: white; /* Set color for the title */
+}
+
+
+.nav-links {
+    list-style: none;
+    /*text-align: center;*/
+    display: none;
+    flex-direction: column;
+    /*justify-content: center; */
+    width: 100%;
+    opacity: 0; /* Initially hidden */
+    /* height: 0; Height of the nav links when closed */
+    transition: opacity 0.3s ease, height 0.3s ease; /* Add transition for opacity */
+}
+
+.nav-links.active{
+    display: flex;
+    opacity: 1;
+}
+
+.nav-links li {
+    margin: 10px 0px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Toggle button styling */
+.nav-toggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Python Resources Section */
+.python-content {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Java Resources Section */
+.java-content {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Web-dev Resources Section */
+.web-dev-content {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Practice platforms Section */
+.practice-platforms {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Books Section */
+.find-books {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.drive_links{
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Left content: image */
+.left-content {
+    margin-right: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.left-content img {
+    max-width: 250px;
+    max-height: auto;
+    margin-right: 20px;
+}
+
+/* Right content: text */
+.right-content {
+    flex: 1;
+}
+
+.right-content h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.right-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.right-content h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.right-content ul {
+    list-style: none;
+}
+
+.right-content ul li {
+    margin-bottom: 10px;
+}
+
+.right-content ul li a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.right-content ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1920px) {
+    .nav-links {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-header {
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+        margin-top: 15px; /* Add margin to space it below the navbar */
+        opacity: 1; /* Make it fully visible */
+        height: auto; /* Set height to auto when active */
+    }
+
+    .nav-toggle {
+        display: block; /* Show toggle button */
+        margin-left: auto;
+    }
+
+    .nav-bar.active {
+        height: auto; /* Expand the navbar when active */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section div[class*= "-content"] {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+        margin-top: 15px; /* Add margin to space it below the navbar */
+        opacity: 1; /* Make it fully visible */
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .python-content, .java-content,
+    .web-dev-content, .find-books,
+    .practice-platforms, .drive_links
+     {
+        flex-direction: column;
+        text-align: center;
+     
+    }
+
+    .left-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .left-content img {
+        margin-bottom: 20px;
+        max-width: 100%;
+        max-height: auto;
+    }
+}
